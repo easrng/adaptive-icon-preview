@@ -254,17 +254,17 @@
         "https://adaptiveicons.com/background.png" === e &&
         "https://adaptiveicons.com/foreground.png" === t
       )
-        window.history.replaceState("", document.title, "/");
+        window.history.replaceState("", document.title, "#");
       else {
         if (
           (!e.startsWith("http://") && !e.startsWith("https://")) ||
           (!t.startsWith("http://") && !t.startsWith("https://"))
         )
-          return void window.history.replaceState("", document.title, "/");
+          return void window.history.replaceState("", document.title, "#");
         window.history.replaceState(
           "",
           document.title,
-          "/#/bg=" + e + "/fg=" + t
+          "#/bg=" + e + "/fg=" + t
         );
       }
       (document.getElementById("icon_background").src = a(e, 400, 400)),
