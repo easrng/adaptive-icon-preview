@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Adaptive Icon Preview</title>
+  </head>
+  <body>
+    <div id="content">
+      <div id="play">
+        <div id="visual">
+          <div id="icon">
+            <img src="/background.png" id="icon_background" />
+            <img src="/foreground.png" id="icon_foreground" />
+            <div id="icon_cover"></div>
+            <div id="icon_shadow"></div>
+            <div id="icon_mask" class="google">
+              <svg>
+                <filter
+                  filterUnits="objectBoundingBox"
+                  height="107.3%"
+                  id="shadow"
+                  width="107.3%"
+                  x="-3.6%"
+                  y="-2.6%"
+                >
+                  <feOffset
+                    dx="0"
+                    dy="2"
+                    in="SourceAlpha"
+                    result="shadowOffsetOuter1"
+                  />
+                  <feGaussianBlur
+                    in="shadowOffsetOuter1"
+                    result="shadowBlurOuter1"
+                    stdDeviation="2"
+                  />
+                  <feComposite
+                    in="shadowBlurOuter1"
+                    in2="SourceAlpha"
+                    operator="out"
+                    result="shadowBlurOuter1"
+                  />
+                  <feColorMatrix
+                    in="shadowBlurOuter1"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"
+                  />
+                </filter>
+              </svg>
+              <svg viewBox="0 0 576 576" id="icon_mask_google">
+                <path
+                  d="M0,0 L576,0 L576,576 L0,576 L0,0 Z M288,384 C341.019336,384 384,341.019336 384,288 C384,234.980664 341.019336,192 288,192 C234.980664,192 192,234.980664 192,288 C192,341.019336 234.980664,384 288,384 Z"
+                  fill="#FFF"
+                />
+                <rect
+                  height="192"
+                  width="192"
+                  x="192"
+                  y="192"
+                  rx="96"
+                  filter="url(#shadow)"
+                ></rect>
+              </svg>
+              <svg viewBox="0 0 576 576" id="icon_mask_apple">
+                <path
+                  d="M0,0 L576,0 L576,576 L0,576 L0,0 Z M226,192 C207.222319,192 192,207.222319 192,226 L192,226 L192,350 C192,368.777681 207.222319,384 226,384 L350,384 C368.777681,384 384,368.777681 384,350 L384,226 C384,207.222319 368.777681,192 350,192 L226,192 Z"
+                  fill="#FFF"
+                />
+                <rect
+                  height="192"
+                  width="192"
+                  x="192"
+                  y="192"
+                  rx="34"
+                  filter="url(#shadow)"
+                ></rect>
+              </svg>
+              <svg viewBox="0 0 576 576" id="icon_mask_microsoft">
+                <path
+                  d="M0,0 L576,0 L576,576 L0,576 L0,0 Z M192,192 L192,384 L384,384 L384,192 L192,192 Z"
+                  fill="#FFF"
+                />
+                <rect
+                  height="192"
+                  width="192"
+                  x="192"
+                  y="192"
+                  filter="url(#shadow)"
+                ></rect>
+              </svg>
+              <svg viewBox="0 0 576 576" id="icon_mask_samsung">
+                <path
+                  d="M0,0 L576,0 L576,576 L0,576 L0,0 Z M288,192 C213.333333,192 192,213.333333 192,288 C192,362.666667 213.386667,384 288,384 C362.613333,384 384,362.666667 384,288 C384,213.333333 362.613333,192 288,192 Z"
+                  fill="#FFF"
+                />
+                <path
+                  d="M288,192 C213.333333,192 192,213.333333 192,288 C192,362.666667 213.386667,384 288,384 C362.613333,384 384,362.666667 384,288 C384,213.333333 362.613333,192 288,192 Z"
+                  filter="url(#shadow)"
+                />
+              </svg>
+            </div>
+            <div id="icon_action"></div>
+          </div>
+          <div id="option">
+            <div id="option_navigation">
+              <div id="option_customize">Customize</div>
+              <div id="option_masks">Masks</div>
+              <div id="option_animation">Animation</div>
+              <div id="option_indicator"></div>
+            </div>
+            <div id="option_wrapper">
+              <div id="customize">
+                <div id="radius">
+                  <div id="radius_track"></div>
+                  <div id="radius_trend"></div>
+                  <div id="radius_thumb"></div>
+                  <input
+                    id="radius_input"
+                    tabindex="-1"
+                    type="range"
+                    value="24"
+                    max="48"
+                    min="0"
+                  />
+                </div>
+                <div id="corner">
+                  <div id="corner_1"></div>
+                  <div id="corner_2"></div>
+                  <div id="corner_3"></div>
+                  <div id="corner_4"></div>
+                </div>
+              </div>
+              <div id="masks">
+                <div id="masks_items">
+                  <svg viewBox="0 0 32 32" id="masks_google">
+                    <rect
+                      height="30"
+                      width="30"
+                      x="1"
+                      y="1"
+                      rx="15"
+                      fill="none"
+                      stroke="#37474F"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 32 32" id="masks_apple">
+                    <rect
+                      height="30"
+                      width="30"
+                      x="1"
+                      y="1"
+                      rx="6"
+                      fill="none"
+                      stroke="#37474F"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 32 32" id="masks_microsoft">
+                    <rect
+                      height="30"
+                      width="30"
+                      x="1"
+                      y="1"
+                      rx="0"
+                      fill="none"
+                      stroke="#37474F"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 32 32" id="masks_samsung">
+                    <path
+                      d="M16 1C4.108 1 1 4.108 1 16c0 11.888 3.113 15 15 15s15-3.112 15-15S27.887 1 16 1z"
+                      fill="none"
+                      stroke="#37474F"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div id="animation">
+                <div id="animation_items">
+                  <svg viewBox="0 0 24 24" id="animation_top">
+                    <path
+                      d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 24 24" id="animation_right">
+                    <path
+                      d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 24 24" id="animation_bottom">
+                    <path
+                      d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 24 24" id="animation_left">
+                    <path
+                      d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 24 24" id="animation_push">
+                    <path
+                      d="M19.5,3.09L15,7.59V4H13V11H20V9H16.41L20.91,4.5L19.5,3.09M4,13V15H7.59L3.09,19.5L4.5,20.91L9,16.41V20H11V13H4Z"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 24 24" id="animation_pop">
+                    <path
+                      d="M10,21V19H6.41L10.91,14.5L9.5,13.09L5,17.59V14H3V21H10M14.5,10.91L19,6.41V10H21V3H14V5H17.59L13.09,9.5L14.5,10.91Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  id="animation_duration"
+                  tabindex="-1"
+                  type="number"
+                  value="320"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="custom" style="display:none">
+            <input id="custom_background_input" />
+            <input id="custom_foreground_input" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="drop">
+      <div id="drop_background"><div>Background</div></div>
+      <div id="drop_foreground"><div>Foreground</div></div>
+    </div>
+    <script src="/script.js?v=2"></script>
+  </body>
+</html>

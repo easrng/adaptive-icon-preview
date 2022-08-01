@@ -1,1 +1,0 @@
-# adaptive-icon-preview
